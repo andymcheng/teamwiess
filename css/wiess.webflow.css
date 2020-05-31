@@ -374,17 +374,20 @@ a {
   position: relative;
   left: -35px;
   z-index: 2;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   overflow: visible;
   width: 900px;
   padding-top: 21px;
   padding-bottom: 21px;
   padding-left: 20px;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -1038,6 +1041,10 @@ a {
   display: none;
 }
 
+.image-3 {
+  display: none;
+}
+
 @media screen and (max-width: 991px) {
   .container {
     display: -webkit-box;
@@ -1165,7 +1172,11 @@ a {
   .welcome-message {
     position: static;
     width: 100%;
-    height: 16vh;
+    height: 120px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .slider-2 {
     position: static;
@@ -1368,6 +1379,10 @@ a {
     border-color: #fff5d4;
     border-radius: 10px;
     text-align: center;
+  }
+  .image-3 {
+    display: block;
+    margin-right: 25px;
   }
 }
 
